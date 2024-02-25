@@ -1,4 +1,4 @@
-name: Rust build and test
+name: Rust
 
 on:
   push:
@@ -10,24 +10,20 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  check:
-    name: Rust project
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install latest nightly
-        uses: actions-rs/toolchain@v1
-        with:
-            toolchain: nightly
-            override: true
-            components: rustfmt, clippy
+    - uses: actions/checkout@v2
 
-      - name: Run cargo build
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-      
-      - name: Run cargo test
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
+    - name: Build
+      uses: actions-rs/cargo@v1
+      with:
+        command: build
+        args: --release
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: revolt-bonfire-build-artifacts
+        path: |
+          target/release/autumn
