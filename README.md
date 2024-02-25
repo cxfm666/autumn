@@ -1,46 +1,46 @@
 # Autumn
 
-## Description
+## 描述
 
-Autumn is the microservice responsible for storing files and attachments.
+Autumn是负责存储文件和附件的微服务。
 
-**Features:**
+**特点：**
 
-- Save files locally or on S3.
-- Support for different tags / buckets with different file requirements.
-- Strips metadata from JPEGs and video files.
+- 本地或在S3上保存文件。
+- 支持带有不同文件要求的不同标签/桶。
+- 从JPEG和视频文件中剥离元数据。
 
-## Stack
+## 技术栈
 
 - [Actix-Web](https://actix.rs/)
 - [rust-s3](https://github.com/durch/rust-s3)
 - [MongoDB](https://mongodb.com/)
 
-## Resources
+## 资源
 
 ### Revolt
 
-- [Revolt Project Board](https://github.com/revoltchat/revolt/discussions) (Submit feature requests here)
-- [Revolt Testers Server](https://app.revolt.chat/invite/Testers)
-- [Contribution Guide](https://developers.revolt.chat/contributing)
+- [Revolt 项目看板](https://github.com/revoltchat/revolt/discussions)（在此提交功能请求）
+- [Revolt 测试者服务器](https://app.revolt.chat/invite/Testers)
+- [贡献指南](https://developers.revolt.chat/contributing)
 
-## CLI Commands
+## 命令行指令
 
-| Command            | Description                                                                                |
-| ------------------ | ------------------------------------------------------------------------------------------ |
-| `cargo build`      | Build/compile Autumn.                                                                      |
-| `cargo run`        | Run Autumn.                                                                                |
-| `cargo fmt`        | Format Autumn. Not intended for PR use to avoid accidentally formatting unformatted files. |
+| 命令               | 描述                                                                                      |
+| ------------------ | ----------------------------------------------------------------------------------------- |
+| `cargo build`      | 构建/编译Autumn。                                                                          |
+| `cargo run`        | 运行Autumn。                                                                               |
+| `cargo fmt`        | 格式化Autumn。不建议用于PR，以避免意外格式化未格式化的文件。                                |
 
-## Contributing
+## 贡献
 
-The contribution guide is located at [developers.revolt.chat/contributing](https://developers.revolt.chat/contributing).
-Please note that a pull request should only take care of one issue so that we can review it quickly.
+贡献指南位于 [developers.revolt.chat/contributing](https://developers.revolt.chat/contributing)。
+请注意，一个拉取请求应该只处理一个问题，以便我们可以快速审查。
 
-## License
+## 许可证
 
-Autumn is licensed under the [GNU Affero General Public License v3.0](https://github.com/revoltchat/autumn/blob/master/LICENSE).
+Autumn根据[GNU Affero 通用公共许可证 v3.0](https://github.com/revoltchat/autumn/blob/master/LICENSE)授权。
 
-## To-Do
+## 待办事项
 
-- Make EXIF stripping optional, but on by default. (?exif=false)
+- 使EXIF剥离可选，但默认开启。（?exif=false）
